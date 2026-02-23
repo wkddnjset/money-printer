@@ -1,0 +1,1827 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-02-22T16:19:34.154Z",
+  "activeFeatures": [
+    "money-printer",
+    "layout",
+    "engine",
+    "balance",
+    "ticker",
+    "status",
+    "candles",
+    "indicators",
+    "chart",
+    "strategies",
+    "mean-reversion",
+    "trend-following",
+    "breakout",
+    "momentum",
+    "divergence",
+    "order-flow",
+    "signal",
+    "signals",
+    "configs",
+    "strategy",
+    "risk",
+    "executor",
+    "trades",
+    "control",
+    "trade",
+    "backtest",
+    "optimizer",
+    "rebalance",
+    "analytics",
+    "settings",
+    "sessions",
+    "allocations",
+    "details"
+  ],
+  "primaryFeature": "money-printer",
+  "features": {
+    "money-printer": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:23:51.539Z",
+        "lastUpdated": "2026-02-22T16:11:58.566Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/lib/config.ts"
+    },
+    "layout": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:27:05.983Z",
+        "lastUpdated": "2026-02-22T10:08:51.775Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/components/layout/Header.tsx"
+    },
+    "engine": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:27:36.136Z",
+        "lastUpdated": "2026-02-22T15:58:39.204Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/TradingEngine.ts"
+    },
+    "balance": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:27:37.672Z",
+        "lastUpdated": "2026-02-22T06:27:37.672Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/exchange/balance/route.ts"
+    },
+    "ticker": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:27:39.359Z",
+        "lastUpdated": "2026-02-22T06:27:39.359Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/exchange/ticker/route.ts"
+    },
+    "status": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:27:48.374Z",
+        "lastUpdated": "2026-02-22T15:58:44.085Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/engine/status/route.ts"
+    },
+    "candles": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:27:56.095Z",
+        "lastUpdated": "2026-02-22T06:27:56.095Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/exchange/candles/route.ts"
+    },
+    "indicators": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:27:58.257Z",
+        "lastUpdated": "2026-02-22T06:39:03.318Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/indicators/index.ts"
+    },
+    "chart": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:28:40.987Z",
+        "lastUpdated": "2026-02-22T06:32:18.635Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/components/chart/CandlestickChart.tsx"
+    },
+    "strategies": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:39:11.746Z",
+        "lastUpdated": "2026-02-22T16:19:05.021Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/strategies/page.tsx"
+    },
+    "mean-reversion": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:39:26.157Z",
+        "lastUpdated": "2026-02-22T15:14:02.390Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/strategies/mean-reversion/williams-bb.ts"
+    },
+    "trend-following": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:40:01.673Z",
+        "lastUpdated": "2026-02-22T15:13:37.136Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/strategies/trend-following/ema-crossover.ts"
+    },
+    "breakout": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:40:53.044Z",
+        "lastUpdated": "2026-02-22T15:13:32.043Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/strategies/breakout/support-resistance.ts"
+    },
+    "momentum": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:41:18.047Z",
+        "lastUpdated": "2026-02-22T15:14:07.413Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/strategies/momentum/momentum-burst.ts"
+    },
+    "divergence": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:42:01.586Z",
+        "lastUpdated": "2026-02-22T06:42:12.323Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/strategies/divergence/hidden-divergence.ts"
+    },
+    "order-flow": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:42:23.347Z",
+        "lastUpdated": "2026-02-22T06:42:32.129Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/strategies/order-flow/spread-scalping.ts"
+    },
+    "signal": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:43:01.210Z",
+        "lastUpdated": "2026-02-22T06:43:01.210Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/signal/SignalAggregator.ts"
+    },
+    "signals": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:45:35.856Z",
+        "lastUpdated": "2026-02-22T09:55:34.532Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/strategies/signals/route.ts"
+    },
+    "configs": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:45:45.014Z",
+        "lastUpdated": "2026-02-22T06:45:45.014Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/strategies/configs/route.ts"
+    },
+    "strategy": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:46:03.816Z",
+        "lastUpdated": "2026-02-22T15:19:49.985Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/components/strategy/SignalSummary.tsx"
+    },
+    "risk": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:48:36.365Z",
+        "lastUpdated": "2026-02-22T16:12:09.058Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/risk/RiskManager.ts"
+    },
+    "executor": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:49:10.421Z",
+        "lastUpdated": "2026-02-22T15:44:35.702Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/executor/PaperTrader.ts"
+    },
+    "trades": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:50:35.175Z",
+        "lastUpdated": "2026-02-22T15:20:00.852Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/trades/page.tsx"
+    },
+    "control": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:50:48.177Z",
+        "lastUpdated": "2026-02-22T09:37:01.556Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/engine/control/route.ts"
+    },
+    "trade": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T06:51:07.462Z",
+        "lastUpdated": "2026-02-22T15:19:53.445Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/components/trade/ActivePositions.tsx"
+    },
+    "backtest": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T08:14:27.410Z",
+        "lastUpdated": "2026-02-22T08:19:14.168Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/backtest/page.tsx"
+    },
+    "optimizer": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T08:16:34.228Z",
+        "lastUpdated": "2026-02-22T15:09:54.757Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/optimizer/StrategyLearner.ts"
+    },
+    "rebalance": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T08:17:42.597Z",
+        "lastUpdated": "2026-02-22T08:17:42.597Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/backtest/rebalance/route.ts"
+    },
+    "analytics": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T08:18:07.544Z",
+        "lastUpdated": "2026-02-22T15:20:08.173Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/analytics/page.tsx"
+    },
+    "settings": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T08:32:28.963Z",
+        "lastUpdated": "2026-02-22T16:19:34.154Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/settings/page.tsx"
+    },
+    "sessions": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T09:38:51.700Z",
+        "lastUpdated": "2026-02-22T09:38:51.700Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/sessions/route.ts"
+    },
+    "allocations": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T09:39:01.350Z",
+        "lastUpdated": "2026-02-22T09:54:30.329Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/strategies/allocations/route.ts"
+    },
+    "details": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-22T16:18:06.216Z",
+        "lastUpdated": "2026-02-22T16:18:06.216Z"
+      },
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/app/api/strategies/details/route.ts"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-02-22T05:28:10.314Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-02-22T16:19:34.154Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-02-22T06:23:51.539Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:11.384Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:13.324Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:18.941Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:23.981Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:25.642Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:27.377Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:30.498Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:33.707Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:36.094Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:56.422Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:26:59.707Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:05.984Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:14.892Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:21.222Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:36.136Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:37.672Z",
+      "feature": "balance",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:39.359Z",
+      "feature": "ticker",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:48.374Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:56.095Z",
+      "feature": "candles",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:27:58.257Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:28:08.315Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:28:12.505Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:28:16.917Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:28:20.771Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:28:40.987Z",
+      "feature": "chart",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:28:51.253Z",
+      "feature": "chart",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:29:02.568Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:29:04.632Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:29:33.051Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:30:13.214Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:32:18.635Z",
+      "feature": "chart",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:33:04.946Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:33:31.728Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:33:50.906Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:38:02.658Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:38:19.601Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:38:28.071Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:38:47.240Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:38:53.211Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:39:03.318Z",
+      "feature": "indicators",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:39:11.746Z",
+      "feature": "strategies",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:39:26.157Z",
+      "feature": "mean-reversion",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:39:35.400Z",
+      "feature": "mean-reversion",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:39:43.998Z",
+      "feature": "mean-reversion",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:39:53.208Z",
+      "feature": "mean-reversion",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:40:01.673Z",
+      "feature": "trend-following",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:40:11.214Z",
+      "feature": "trend-following",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:40:21.042Z",
+      "feature": "trend-following",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:40:29.523Z",
+      "feature": "trend-following",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:40:38.352Z",
+      "feature": "trend-following",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:40:53.044Z",
+      "feature": "breakout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:41:01.543Z",
+      "feature": "breakout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:41:09.437Z",
+      "feature": "breakout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:41:18.047Z",
+      "feature": "momentum",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:41:26.897Z",
+      "feature": "momentum",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:41:38.965Z",
+      "feature": "momentum",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:41:49.186Z",
+      "feature": "momentum",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:42:01.586Z",
+      "feature": "divergence",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:42:12.323Z",
+      "feature": "divergence",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:42:23.347Z",
+      "feature": "order-flow",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:42:32.129Z",
+      "feature": "order-flow",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:42:47.005Z",
+      "feature": "strategies",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:43:01.210Z",
+      "feature": "signal",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:45:35.856Z",
+      "feature": "signals",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:45:45.014Z",
+      "feature": "configs",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:46:03.816Z",
+      "feature": "strategy",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:46:08.713Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:46:12.825Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:48:36.365Z",
+      "feature": "risk",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:49:10.421Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:49:41.212Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:50:23.592Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:50:35.175Z",
+      "feature": "trades",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:50:48.177Z",
+      "feature": "control",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:51:07.462Z",
+      "feature": "trade",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:51:16.385Z",
+      "feature": "trade",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:51:31.864Z",
+      "feature": "trade",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:51:51.558Z",
+      "feature": "trades",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:52:03.578Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T06:52:08.811Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:13:44.551Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:14:27.410Z",
+      "feature": "backtest",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:14:58.982Z",
+      "feature": "backtest",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:15:22.153Z",
+      "feature": "backtest",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:16:12.309Z",
+      "feature": "backtest",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:16:34.228Z",
+      "feature": "optimizer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:16:58.788Z",
+      "feature": "optimizer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:17:25.065Z",
+      "feature": "backtest",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:17:42.597Z",
+      "feature": "rebalance",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:18:07.545Z",
+      "feature": "analytics",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:19:14.168Z",
+      "feature": "backtest",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:20:02.867Z",
+      "feature": "analytics",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:31:39.750Z",
+      "feature": "strategies",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T08:32:28.963Z",
+      "feature": "settings",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:05:29.726Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:06:25.255Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:07:07.661Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:07:41.736Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:07:57.998Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:19:12.069Z",
+      "feature": "strategy",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:19:29.565Z",
+      "feature": "trade",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:19:41.420Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:20:01.249Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:33:31.091Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:33:36.228Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:33:41.907Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:33:51.908Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:34:12.739Z",
+      "feature": "strategies",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:34:53.087Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:35:20.668Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:35:37.807Z",
+      "feature": "risk",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:36:44.126Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:37:01.556Z",
+      "feature": "control",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:37:22.186Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:37:42.361Z",
+      "feature": "signals",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:38:04.197Z",
+      "feature": "trades",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:38:29.041Z",
+      "feature": "analytics",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:38:51.700Z",
+      "feature": "sessions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:39:01.350Z",
+      "feature": "allocations",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:39:34.781Z",
+      "feature": "strategy",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:39:52.134Z",
+      "feature": "trade",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:40:41.165Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:40:55.740Z",
+      "feature": "trades",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:41:03.632Z",
+      "feature": "trades",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:41:12.054Z",
+      "feature": "analytics",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:41:20.931Z",
+      "feature": "analytics",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:41:35.112Z",
+      "feature": "analytics",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:50:36.035Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:50:59.102Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:51:07.166Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:51:12.683Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:51:27.661Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:51:35.089Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:51:42.359Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:51:48.624Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:51:54.307Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:52:13.596Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:52:55.842Z",
+      "feature": "optimizer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:53:10.088Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:53:37.962Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:53:43.548Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:53:57.416Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:54:05.760Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:54:30.329Z",
+      "feature": "allocations",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:54:38.032Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:54:49.947Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:55:01.378Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:55:14.279Z",
+      "feature": "strategy",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:55:26.409Z",
+      "feature": "signals",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T09:55:34.532Z",
+      "feature": "signals",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:01:34.700Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:01:39.678Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:01:49.815Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:02:02.716Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:02:08.494Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:02:17.967Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:02:41.119Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:04:22.063Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:07:35.358Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:08:03.323Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:08:11.390Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:08:18.628Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:08:35.242Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:08:51.775Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:11:56.421Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:12:09.747Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:23:34.649Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:23:40.059Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:23:44.450Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:23:54.784Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:24:00.486Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T10:24:16.909Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T14:31:49.219Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:09:50.260Z",
+      "feature": "optimizer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:09:54.757Z",
+      "feature": "optimizer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:11:31.024Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:11:54.900Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:13:22.268Z",
+      "feature": "mean-reversion",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:13:26.979Z",
+      "feature": "mean-reversion",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:13:32.043Z",
+      "feature": "breakout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:13:37.136Z",
+      "feature": "trend-following",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:13:43.251Z",
+      "feature": "momentum",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:13:51.421Z",
+      "feature": "momentum",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:14:02.390Z",
+      "feature": "mean-reversion",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:14:07.413Z",
+      "feature": "momentum",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:19:04.705Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:19:36.829Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:19:41.973Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:19:49.985Z",
+      "feature": "strategy",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:19:53.445Z",
+      "feature": "trade",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:19:57.356Z",
+      "feature": "trades",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:20:00.852Z",
+      "feature": "trades",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:20:08.173Z",
+      "feature": "analytics",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:37:47.359Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:37:52.915Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:37:58.575Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:38:29.631Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:38:40.513Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:38:46.755Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:39:00.884Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:39:09.462Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:39:21.420Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:39:28.216Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:39:34.465Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:40:12.008Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:40:27.405Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:40:38.827Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:44:13.180Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:44:16.646Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:44:21.077Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:44:26.792Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:44:35.703Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:47:00.817Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:47:24.377Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:58:39.204Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T15:58:44.085Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T16:11:58.566Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T16:12:09.058Z",
+      "feature": "risk",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T16:18:06.216Z",
+      "feature": "details",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T16:19:05.021Z",
+      "feature": "strategies",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T16:19:11.709Z",
+      "feature": "settings",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T16:19:22.444Z",
+      "feature": "settings",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-22T16:19:34.154Z",
+      "feature": "settings",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-02-22T06:23:57.656Z",
+  "reason": "compaction",
+  "status": {
+    "version": "2.0",
+    "lastUpdated": "2026-02-22T06:23:51.539Z",
+    "activeFeatures": [
+      "money-printer"
+    ],
+    "primaryFeature": "money-printer",
+    "features": {
+      "money-printer": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-22T06:23:51.539Z",
+          "lastUpdated": "2026-02-22T06:23:51.539Z"
+        },
+        "lastFile": "/Users/seojang-won/Dev/money-printer/next.config.ts"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-02-22T05:28:10.314Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-02-22T06:23:51.539Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-02-22T06:23:51.539Z",
+        "feature": "money-printer",
+        "phase": "do",
+        "action": "updated"
+      }
+    ]
+  }
+}
