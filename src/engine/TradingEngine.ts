@@ -6,6 +6,7 @@ import { getEnabledStrategies } from "./strategies";
 import {
   initAllocations,
   getStrategyPosition,
+  getStrategyPositions,
   getOpenPositions,
   getAllAllocations,
   getSessionTotalBalance,
@@ -247,74 +248,98 @@ async function onTick(): Promise<TickResult> {
           timestamp: Date.now(),
         });
 
-        // 열린 포지션 확인
-        const openPos = getStrategyPosition(sessionId, strategyId, state.symbol);
+        // 열린 포지션 목록 (멀티엔트리)
+        const openPositions = getStrategyPositions(sessionId, strategyId, state.symbol);
+        const maxEntries = tradingConfig.maxEntriesPerStrategy;
 
-        if (openPos) {
-          // 스왑 진행중이면 스킵
+        // (A) 모든 열린 포지션에 대해 SL/TP 개별 체크
+        if (openPositions.length > 0) {
           if (isSwapPending(strategyId)) {
             actionEntry.reason = "스왑 진행중";
           } else {
-            // a. 열린 포지션 → SL/TP 체크 (전략별 리스크 사용)
-            const closeResult = await checkAndClosePosition(sessionId, openPos, currentPrice, strategyRisk);
-            if (closeResult) {
-              actionEntry.executed = closeResult.executed;
-              actionEntry.reason = closeResult.reason;
-              actionEntry.tradeId = closeResult.trade?.id;
-              if (closeResult.executed) {
-                result.closedPositions++;
-                sellSignals.push(`${strategyId}(${closeResult.reason})`);
+            for (const pos of openPositions) {
+              const closeResult = await checkAndClosePosition(sessionId, pos, currentPrice, strategyRisk);
+              if (closeResult) {
+                actionEntry.executed = closeResult.executed;
+                actionEntry.reason = closeResult.reason;
+                actionEntry.tradeId = closeResult.trade?.id;
+                if (closeResult.executed) {
+                  result.closedPositions++;
+                  sellSignals.push(`${strategyId}(${closeResult.reason})`);
+                }
+              } else if (signal.action === "sell" && signal.confidence >= 0.3) {
+                const sellResult = await executeStrategySell(
+                  sessionId, pos.id, currentPrice,
+                  strategyId, state.symbol, pos.quantity,
+                  signal.indicators,
+                );
+                if (sellResult.executed) {
+                  actionEntry.executed = true;
+                  actionEntry.reason = `전략 매도 (conf: ${signal.confidence.toFixed(2)})`;
+                  actionEntry.tradeId = sellResult.trade?.id;
+                  result.closedPositions++;
+                  sellSignals.push(`${strategyId}(매도신호 ${signal.confidence.toFixed(2)})`);
+                }
               }
-            } else if (signal.action === "sell" && signal.confidence >= 0.3) {
-              // b. 전략이 sell 신호 → OrderExecutor로 청산
-              const sellResult = await executeStrategySell(
-                sessionId, openPos.id, currentPrice,
-                strategyId, state.symbol, openPos.quantity,
-                signal.indicators,
-              );
-              if (sellResult.executed) {
-                actionEntry.executed = true;
-                actionEntry.reason = `전략 매도 (conf: ${signal.confidence.toFixed(2)})`;
-                actionEntry.tradeId = sellResult.trade?.id;
-                result.closedPositions++;
-                sellSignals.push(`${strategyId}(매도신호 ${signal.confidence.toFixed(2)})`);
+            }
+
+            // 아직 포지션이 남아있으면 보유중 상태 표시
+            const remainingPositions = getStrategyPositions(sessionId, strategyId, state.symbol);
+            if (remainingPositions.length > 0 && !actionEntry.executed) {
+              const avgEntry = remainingPositions.reduce((s, p) => s + p.entryPrice * p.quantity, 0) / remainingPositions.reduce((s, p) => s + p.quantity, 0);
+              const pnlPct = ((currentPrice - avgEntry) / avgEntry * 100).toFixed(2);
+              actionEntry.reason = `보유중 ${remainingPositions.length}/${maxEntries} (avg PnL: ${pnlPct}%)`;
+            }
+          }
+        }
+
+        // (B) 매수 시그널 + 슬롯 남음 + 쿨다운 통과 → 새 진입
+        const currentOpenCount = getStrategyPositions(sessionId, strategyId, state.symbol).length;
+        if (signal.action === "buy" && currentOpenCount < maxEntries && !isSwapPending(strategyId)) {
+          // 쿨다운 체크: 마지막 진입 이후 최소 대기 시간
+          const lastEntry = openPositions.length > 0 ? openPositions[openPositions.length - 1] : null;
+          const cooldownMs = tradingConfig.entryMinCooldownSeconds * 1000;
+          const cooldownOk = !lastEntry || (now - lastEntry.entryAt >= cooldownMs);
+
+          if (!cooldownOk) {
+            const remainSec = lastEntry ? Math.ceil((cooldownMs - (now - lastEntry.entryAt)) / 1000) : 0;
+            actionEntry.reason = `쿨다운 대기 (${remainSec}초)`;
+            blockedSignals.push(`${strategyId}(쿨다운:${remainSec}s)`);
+          } else {
+            const lessonCheck = checkLessonMatch(strategyId, signal.indicators);
+            const adjustedConfidence = signal.confidence * lessonCheck.factor;
+            const adaptiveThreshold = getAdaptiveThreshold(strategyId);
+
+            if (adjustedConfidence >= adaptiveThreshold) {
+              const alloc = loadAllocation(sessionId, strategyId);
+              if (alloc) {
+                const risk = checkStrategyRisk(strategyId, currentPrice, alloc.initialUsdc, strategyRisk);
+                if (risk.allowed) {
+                  const entryIndex = currentOpenCount;
+                  const buyResult = await executeStrategyBuy(sessionId, strategyId, state.symbol, currentPrice, strategyRisk, richSignalData, entryIndex);
+                  actionEntry.executed = buyResult.executed;
+                  actionEntry.reason = buyResult.reason;
+                  actionEntry.tradeId = buyResult.trade?.id;
+                  if (buyResult.executed) {
+                    result.newPositions++;
+                    buySignals.push(`${strategyId}(entry ${entryIndex + 1}/${maxEntries}, conf:${signal.confidence.toFixed(2)})`);
+                  }
+                } else {
+                  actionEntry.reason = risk.reason;
+                  blockedSignals.push(`${strategyId}(리스크:${risk.reason})`);
+                }
               }
             } else {
-              const pnlPct = ((currentPrice - openPos.entryPrice) / openPos.entryPrice * 100).toFixed(2);
-              actionEntry.reason = `보유중 (PnL: ${pnlPct}%)`;
+              actionEntry.reason = lessonCheck.factor < 1.0
+                ? `학습차단: ${lessonCheck.reason} (${signal.confidence.toFixed(2)}→${adjustedConfidence.toFixed(2)}<${adaptiveThreshold})`
+                : `신호약함 (${adjustedConfidence.toFixed(2)}<${adaptiveThreshold})`;
+              blockedSignals.push(`${strategyId}(conf:${adjustedConfidence.toFixed(2)}<${adaptiveThreshold})`);
             }
           }
-        } else if (signal.action === "buy") {
-          // c. 포지션 없고 buy 신호 → 학습 체크 + 리스크 체크 후 매수
-          const lessonCheck = checkLessonMatch(strategyId, signal.indicators);
-          const adjustedConfidence = signal.confidence * lessonCheck.factor;
-          const adaptiveThreshold = getAdaptiveThreshold(strategyId);
-
-          if (adjustedConfidence >= adaptiveThreshold) {
-            const alloc = loadAllocation(sessionId, strategyId);
-            if (alloc) {
-              const risk = checkStrategyRisk(strategyId, currentPrice, alloc.initialUsdc, strategyRisk);
-              if (risk.allowed) {
-                const buyResult = await executeStrategyBuy(sessionId, strategyId, state.symbol, currentPrice, strategyRisk, richSignalData);
-                actionEntry.executed = buyResult.executed;
-                actionEntry.reason = buyResult.reason;
-                actionEntry.tradeId = buyResult.trade?.id;
-                if (buyResult.executed) {
-                  result.newPositions++;
-                  buySignals.push(`${strategyId}(${signal.confidence.toFixed(2)})`);
-                }
-              } else {
-                actionEntry.reason = risk.reason;
-                blockedSignals.push(`${strategyId}(리스크:${risk.reason})`);
-              }
-            }
-          } else {
-            actionEntry.reason = lessonCheck.factor < 1.0
-              ? `학습차단: ${lessonCheck.reason} (${signal.confidence.toFixed(2)}→${adjustedConfidence.toFixed(2)}<${adaptiveThreshold})`
-              : `신호약함 (${adjustedConfidence.toFixed(2)}<${adaptiveThreshold})`;
-            blockedSignals.push(`${strategyId}(conf:${adjustedConfidence.toFixed(2)}<${adaptiveThreshold})`);
-          }
-        } else {
+        } else if (signal.action === "buy" && currentOpenCount >= maxEntries) {
+          actionEntry.reason = `슬롯 만석 (${currentOpenCount}/${maxEntries})`;
+          blockedSignals.push(`${strategyId}(슬롯만석)`);
+        } else if (openPositions.length === 0 && signal.action !== "buy") {
           actionEntry.reason = signal.action === "hold"
             ? "관망"
             : `${signal.action} conf:${signal.confidence.toFixed(2)}`;

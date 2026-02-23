@@ -25,6 +25,12 @@ export const tradingConfig = {
   scalpingTickSeconds: Number(process.env.SCALPING_TICK_SECONDS ?? 5),
   /** 캔들 데이터 캐시 TTL (초). API 부하 방지 */
   candleCacheTtlSeconds: 30,
+  /** 전략당 최대 진입 횟수 (멀티엔트리) */
+  maxEntriesPerStrategy: 4,
+  /** 각 진입별 배분금 비율 (합계 = 1.0) */
+  entrySizeWeights: [0.20, 0.25, 0.25, 0.30] as readonly number[],
+  /** 동일 전략 연속 매수 쿨다운 (초) */
+  entryMinCooldownSeconds: 30,
 };
 
 /** 기본 리스크 설정 (폴백용) */

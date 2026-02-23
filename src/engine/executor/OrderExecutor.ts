@@ -31,13 +31,20 @@ export async function executeStrategyBuy(
   price: number,
   riskConfig: RiskConfig,
   signalData?: string,
+  entryIndex: number = 0,
 ): Promise<ExecutionResult> {
   const alloc = loadAllocation(sessionId, strategyId);
   if (!alloc) return { executed: false, trade: null, reason: "배분 정보 없음" };
 
-  // 포지션 사이즈: 배분 자본의 maxPositionPercent
-  const maxPositionValue = alloc.currentUsdc * (riskConfig.maxPositionPercent / 100);
-  const quantity = maxPositionValue / price;
+  // 포지션 사이즈: 초기 배분금 × 진입 비율 (멀티엔트리)
+  const weights = tradingConfig.entrySizeWeights;
+  const weight = weights[Math.min(entryIndex, weights.length - 1)];
+  let positionValue = alloc.initialUsdc * weight;
+  // 잔액 부족 시 currentUsdc 한도 내에서 축소
+  if (positionValue > alloc.currentUsdc) {
+    positionValue = alloc.currentUsdc;
+  }
+  const quantity = positionValue / price;
 
   if (quantity <= 0) {
     return { executed: false, trade: null, reason: "매수 수량 0" };
@@ -48,7 +55,7 @@ export async function executeStrategyBuy(
   if (tradingConfig.paperMode) {
     const trade = paperBuy(sessionId, symbol, quantity, price, strategyId, data, true);
     if (!trade) return { executed: false, trade: null, reason: "잔고 부족" };
-    console.log(`[BUY:PAPER] ${strategyId}: ${trade.quantity.toFixed(4)} WLD @ $${price.toFixed(4)} (SL:${riskConfig.stopLossPercent}% TP:${riskConfig.takeProfitPercent}%)`);
+    console.log(`[BUY:PAPER] ${strategyId}: entry ${entryIndex + 1}/${tradingConfig.maxEntriesPerStrategy} ${trade.quantity.toFixed(4)} WLD @ $${price.toFixed(4)} (SL:${riskConfig.stopLossPercent}% TP:${riskConfig.takeProfitPercent}%)`);
     return { executed: true, trade };
   }
 
@@ -59,7 +66,7 @@ export async function executeStrategyBuy(
 
   pendingSwaps.add(strategyId);
   try {
-    console.log(`[BUY:REAL] ${strategyId}: ${quantity.toFixed(4)} WLD 스왑 시작...`);
+    console.log(`[BUY:REAL] ${strategyId}: entry ${entryIndex + 1}/${tradingConfig.maxEntriesPerStrategy} ${quantity.toFixed(4)} WLD 스왑 시작...`);
     const result = await createOrder({
       symbol,
       side: "buy",

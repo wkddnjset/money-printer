@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-02-22T16:19:34.154Z",
+  "lastUpdated": "2026-02-23T16:41:12.701Z",
   "activeFeatures": [
     "money-printer",
     "layout",
@@ -47,7 +47,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-02-22T06:23:51.539Z",
-        "lastUpdated": "2026-02-22T16:11:58.566Z"
+        "lastUpdated": "2026-02-23T16:39:47.824Z"
       },
       "lastFile": "/Users/seojang-won/Dev/money-printer/src/lib/config.ts"
     },
@@ -73,7 +73,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-02-22T06:27:36.136Z",
-        "lastUpdated": "2026-02-22T15:58:39.204Z"
+        "lastUpdated": "2026-02-23T16:41:12.701Z"
       },
       "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/TradingEngine.ts"
     },
@@ -320,9 +320,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-02-22T06:49:10.421Z",
-        "lastUpdated": "2026-02-22T15:44:35.702Z"
+        "lastUpdated": "2026-02-23T16:40:25.009Z"
       },
-      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/executor/PaperTrader.ts"
+      "lastFile": "/Users/seojang-won/Dev/money-printer/src/engine/executor/OrderExecutor.ts"
     },
     "trades": {
       "phase": "do",
@@ -476,7 +476,7 @@
   "session": {
     "startedAt": "2026-02-22T05:28:10.314Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-02-22T16:19:34.154Z"
+    "lastActivity": "2026-02-23T16:41:12.701Z"
   },
   "history": [
     {
@@ -1820,6 +1820,48 @@
     {
       "timestamp": "2026-02-22T16:19:34.154Z",
       "feature": "settings",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T16:39:47.824Z",
+      "feature": "money-printer",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T16:39:59.134Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T16:40:13.913Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T16:40:21.358Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T16:40:25.009Z",
+      "feature": "executor",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T16:40:33.715Z",
+      "feature": "engine",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T16:41:12.701Z",
+      "feature": "engine",
       "phase": "do",
       "action": "updated"
     }

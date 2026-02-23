@@ -222,6 +222,28 @@ export function getStrategyPosition(
   return mapRowToTrade(row);
 }
 
+/** 특정 전략의 모든 열린 포지션 조회 (멀티엔트리용) */
+export function getStrategyPositions(
+  sessionId: number,
+  strategyId: string,
+  symbol: string,
+): Trade[] {
+  const db = getDb();
+  const rows = db.prepare(`
+    SELECT * FROM trades
+    WHERE session_id = ? AND strategy_id = ? AND symbol = ? AND exit_price IS NULL
+    ORDER BY entry_at ASC
+  `).all(sessionId, strategyId, symbol) as {
+    id: number; session_id: number; strategy_id: string; symbol: string; side: string;
+    entry_price: number; exit_price: number | null; quantity: number;
+    pnl: number | null; pnl_percent: number | null; fee: number;
+    is_paper: number; signal_data: string | null;
+    entry_at: number; exit_at: number | null; created_at: number;
+  }[];
+
+  return rows.map(mapRowToTrade);
+}
+
 /** 현재 세션의 모든 열린 포지션 조회 */
 export function getOpenPositions(sessionId: number): Trade[] {
   const db = getDb();
